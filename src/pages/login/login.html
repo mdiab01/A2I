@@ -22,17 +22,20 @@
         </ion-item>
         <div padding>
           <ion-item>
-            <ion-input [(ngModel)]='_user.username' name="username" type="text" placeholder="Username"></ion-input>
+            <ion-input [(ngModel)]='username' name="username" type="text" placeholder="Username"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-input [(ngModel)]='_user.password' name="password" type="password" placeholder="Password"></ion-input>
+            <ion-input [(ngModel)]='password' name="password" type="password" placeholder="Password"></ion-input>
           </ion-item>
         </div>
         <div class='loginbutton'>
           <button ion-button (click)="login()">Login</button>
           <button ion-button outline (click)="toReg()">Register</button>
         </div>
+        <ion-item *ngIf='showFailed'>
+          <ion-label text-center>Incorrect Login Information</ion-label>
+        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>

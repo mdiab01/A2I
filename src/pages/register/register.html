@@ -14,5 +14,28 @@
 
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col class='center' align-self-center col-md-7 col-lg-6 col-xs-12>
+        <ion-item no-lines>
+          <ion-label class='loginheader' text-center>Register Here</ion-label>
+        </ion-item>
+        <div padding>
+          <ion-item>
+            <ion-input [(ngModel)]='username' name="username" type="text" placeholder="Username"></ion-input>
+          </ion-item>
 
+          <ion-item>
+            <ion-input [(ngModel)]='password' name="password" type="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]='dob' name="dob" type="date" placeholder="Date"></ion-input>
+          </ion-item>
+        </div>
+        <div class='loginbutton'>
+          <button ion-button (click)="register()">Register</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
