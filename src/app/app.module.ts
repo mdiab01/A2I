@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { TabPage } from '../pages/tab/tab';
 import { UserServiceProvider } from '../providers/user-service/user-service';
+import { TodoserviceProvider } from '../providers/todoservice/todoservice';
 
 @NgModule( {
   declarations: [
@@ -32,7 +33,8 @@ import { UserServiceProvider } from '../providers/user-service/user-service';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    UserServiceProvider
+    UserServiceProvider,
+    TodoserviceProvider
   ]
 } )
 export class AppModule { }
