@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register'
 import { TabPage } from '../pages/tab/tab';
 import { UserServiceProvider } from '../providers/user-service/user-service';
 import { TodoserviceProvider } from '../providers/todoservice/todoservice';
@@ -16,6 +17,7 @@ import { TodoserviceProvider } from '../providers/todoservice/todoservice';
     MyApp,
     HomePage,
     LoginPage,
+    RegisterPage,
     TabPage
   ],
   imports: [
@@ -27,7 +29,8 @@ import { TodoserviceProvider } from '../providers/todoservice/todoservice';
     MyApp,
     TabPage,
     HomePage,
-    LoginPage
+    LoginPage,
+    RegisterPage,
   ],
   providers: [
     StatusBar,

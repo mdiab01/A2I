@@ -1,3 +1,19 @@
 page-home {
 
+    .homeHeader {
+        font-size: 18px;
+        font-weight: bold;
+    }
+        
+    #toDoInput {
+        // background-color: rgba(72,138,255, .2);
+    }
+
+    .addButton {
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+
 }

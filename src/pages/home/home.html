@@ -7,8 +7,34 @@
 </ion-header>
 
 <ion-content padding>
-  <header class="header">
-    <h1>Todos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
-  </header>
+
+  <ion-item>  
+    <ion-label class="homeHeader" text-center>Todo List</ion-label>
+  </ion-item>
+
+  <div>
+    <ion-item>
+      <ion-label>Add Items Here: </ion-label>
+      <ion-input [(ngModel)]="todo" id="toDoInput" id="toDoInput" type="text" value=""></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="addButton">
+    <button id="button" ion-button >Add</button>
+  </div>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let t of todos">
+        <ion-item>
+            {{t}}
+        </ion-item>
+
+        <ion-item-options side="right">
+            <button ion-button color="danger" (click)="delete(t)">
+                <ion-icon name="trash"></ion-icon> Delete
+            </button>
+        </ion-item-options>
+    </ion-item-sliding>
+</ion-list>
+
 </ion-content>
